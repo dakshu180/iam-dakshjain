@@ -19,13 +19,14 @@ const artwork = Buffer.from(`<svg width="1200" height="630" xmlns="http://www.w3
   <rect width="1200" height="630" fill="url(#glow)"/>
   <text x="78" y="350" font-family="Georgia, serif" font-size="360" fill="url(#letter)" opacity=".8">D</text>
   <text x="420" y="290" font-family="Arial, sans-serif" font-size="78" font-weight="700" fill="#f4f1ec" letter-spacing="3">DAKSH JAIN</text>
-  <text x="424" y="352" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ff3d5a" letter-spacing="12">THE SERIES</text>
-  <text x="424" y="430" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#a7a6ad" letter-spacing="3">SYSTEMS ENGINEERING · AI · ROBOTICS</text>
+  <text x="424" y="352" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ff3d5a" letter-spacing="6">AI &amp; ROBOTICS DEVELOPER</text>
+  <text x="424" y="404" font-family="Arial, sans-serif" font-size="22" font-weight="600" fill="#f4f1ec" letter-spacing="3">CEO · RENVOVA SOLUTIONS</text>
+  <text x="424" y="470" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#a7a6ad" letter-spacing="3">iam-dakshjain.netlify.app</text>
 </svg>`);
 
 await sharp({ create: { width: 1200, height: 630, channels: 3, background: '#07070a' } })
   .composite([{ input: artwork }])
-  .jpeg({ quality: 85 })
+  .jpeg({ quality: 82, mozjpeg: true, progressive: true })
   .toFile(`${OUT}/og-image.jpg`);
 
 console.log('social image built');
