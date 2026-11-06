@@ -29,6 +29,9 @@ export default function About() {
               src={profile.portrait.src}
               alt={profile.portrait.alt}
               loading="lazy"
+              decoding="async"
+              width={profile.portrait.width}
+              height={profile.portrait.height}
               className="absolute bottom-0 left-1/2 h-[92%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
             />
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/90 to-transparent" />

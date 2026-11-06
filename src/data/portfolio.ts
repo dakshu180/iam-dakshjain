@@ -28,6 +28,8 @@ export const profile = {
     src: '/assets/daksh-monogram.svg',
     srcSet: '',
     alt: 'Daksh Jain monogram artwork',
+    width: 600,
+    height: 900,
   },
   interests: ['Custom Firmware', 'Cryptography', 'AI & Robotics'],
 };
